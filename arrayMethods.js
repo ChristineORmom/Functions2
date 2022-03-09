@@ -30,7 +30,7 @@ console. log(evenNumbers)
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
-const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
+const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];           
 // Do not edit the code above.
 
 /*
