@@ -21,11 +21,11 @@ const evenNumbers  = mixedNumbers.filter(function(element){
   return element % 2 === 0
 
 })
-console.log(evenNumbers)
+
+
 
 const evenNumbers = mixedNumbers.filter(num => num % 2 === 0)
 
-console. log(evenNumbers)
 // two ways to state the same filter method traditional and arrow
 ////////// PROBLEM 2 //////////
 
