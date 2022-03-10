@@ -12,9 +12,9 @@ const multiply = (num1, num2, cb) => cb(num1 * num2)
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
- multiply(4, 3, answer => {
-   console.log('The answer is ' + answer) //should console.log 12
- })
+//  multiply(4, 3, answer => {
+//    console.log('The answer is ' + answer) //should console.log 12
+//  })
 
 // I think this is an outer function with (inner function callback)
 
@@ -43,9 +43,10 @@ const first = (array, callback) => callback(array[0])
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-first(names, firstName => {
-     console.log('The first name in names is ' + firstName)
- })
+
+// first(names, firstName => {
+//     console.log('The first name in name is' + firstName)
+// })
 
 
 
@@ -56,16 +57,18 @@ first(names, firstName => {
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-// CODE HERE
+const last = (array, callback) => callback(array[array.length - 1])
 
+
+// read slowly what is being asked talk your way through each item
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// last(names, lastName => {
-//   console.log('The last name in names is ' + lastName)
-// })
+last(names, lastName => {
+  console.log('The last name in names is ' + lastName)
+})
 
 
 
