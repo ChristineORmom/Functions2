@@ -112,32 +112,32 @@ const contains = (array, names, callback) => {
   Hint: you can use a nested for loop to do this.
 */
 
-const uniq = (array, callback) => {
-    for (let i = 0; i < array.length; i++) {
-        for (let x = i + 1; x < array.length; x++) {
-            if (array[i] === array[x]) {
-            array.splice(x, 1)
-             x--
-           }
-        }
-    }
-    callback(array)
-}
-/* Holly Crap Batman! Wow read super slow a lot of things going on in here. First we have a function. Second it returns a combined array and for loop from week 2 
-executing a block of code on each. Also is using array.length from week three/ assessment.  Third it is nesting another for loop in the combined loop invoking the callback
-with the modified array as an argument. Oh and .splice that could be from functions week 3. That's bitting off more than you can chew.
-*/
+// const uniq = (array, callback) => {
+//     for (let i = 0; i < array.length; i++) {
+//         for (let x = i + 1; x < array.length; x++) {
+//             if (array[i] === array[x]) {
+//             array.splice(x, 1)
+//              x--
+//            }
+//         }
+//     }
+//     callback(array)
+// }
+// /* Holly Crap Batman! Wow read super slow a lot of things going on in here. First we have a function. Second it returns a combined array and for loop from week 2 
+// executing a block of code on each. Also is using array.length from week three/ assessment.  Third it is nesting another for loop in the combined loop invoking the callback
+// with the modified array as an argument. Oh and .splice that could be from functions week 3. That's bitting off more than you can chew.
+// */
 
-/*
-  Invoke the uniq function, passing in the names array from above and a callback function.
-  The callback function should take in one parameter called uniqArr.
-  The callback should print a string that says:
-  'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
-*/
+// /*
+//   Invoke the uniq function, passing in the names array from above and a callback function.
+//   The callback function should take in one parameter called uniqArr.
+//   The callback should print a string that says:
+//   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
+// */
 
-uniq(names, uniqArr => console.log (`The new names array with all the duplicate items removed is ${uniqArr}`))
-// wow brain hurt. Callback printing a string with a ${} template literal fist used in week 1 when learning strings and concatenation. Combining every thing we've learned so far.
-// terminal doesn't like callback(array) typed in before my last comment. callback is not defined. so yeah it doesn't work but looks fancy.
+// uniq(names, uniqArr => console.log (`The new names array with all the duplicate items removed is ${uniqArr}`))
+// // wow brain hurt. Callback printing a string with a ${} template literal fist used in week 1 when learning strings and concatenation. Combining every thing we've learned so far.
+// // terminal doesn't like callback(array) typed in before my last comment. callback is not defined. so yeah it doesn't work but looks fancy.
 
 
 ////////// PROBLEM 6 //////////
@@ -147,7 +147,7 @@ uniq(names, uniqArr => console.log (`The new names array with all the duplicate 
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-// CODE HERE 
+const each = (array, callback) => array.forEach((element, i) => callback(element, i))
 
 
 /*
@@ -157,7 +157,7 @@ uniq(names, uniqArr => console.log (`The new names array with all the duplicate 
   'The item at index [INDEXPARAM] is [ITEMPARAM].'
 */
 
-// CODE HERE
+each(names, (item, index) => `The item at index ${index}`)
 
 
 ////////// PROBLEM 7 //////////
