@@ -16,7 +16,7 @@ const multiply = (num1, num2, cb) => cb(num1 * num2)
    console.log('The answer is ' + answer) //should console.log 12
  })
 
-
+// I think this is an outer function with (inner function callback)
 
 ////////// PROBLEMS 2 - 6 //////////
 
@@ -35,16 +35,17 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// CODE HERE 
+const first = (array, callback) => callback(array[0])
+// read slowly to see what is being asked
 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// first(names, firstName => {
-//   console.log('The first name in names is ' + firstName)
-// })
+first(names, firstName => {
+     console.log('The first name in names is ' + firstName)
+ })
 
 
 
