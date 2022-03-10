@@ -66,9 +66,9 @@ const last = (array, callback) => callback(array[array.length - 1])
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-last(names, lastName => {
-  console.log('The last name in names is ' + lastName)
-})
+// last(names, lastName => {
+//   console.log('The last name in names is ' + lastName)
+// })
 
 
 
@@ -81,20 +81,26 @@ last(names, lastName => {
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-// CODE HERE 
-
+const contains = (array, names, callback) => {
+    if (array.includes(names) === true) {
+      callback(true)
+    } else {
+      callback(false)
+    }
+}
+// read slowly what is asked. Is asking for an if statement returning a boolean from week three. 
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// contains(names, 'Colt', result => {
-//   if(result === true){
-//     console.log('Colt is in the array')
-//   } else {
-//     console.log('Colt is not in the array')
-//   }
-// })
+contains(names, '// conColt', result => {
+   if(result === true){
+     console.log('Colt is in the array')
+   } else {
+     console.log('Colt is not in the array')
+   }
+ })
 
 
 
