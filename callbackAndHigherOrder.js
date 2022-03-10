@@ -94,13 +94,13 @@ const contains = (array, names, callback) => {
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-contains(names, '// conColt', result => {
-   if(result === true){
-     console.log('Colt is in the array')
-   } else {
-     console.log('Colt is not in the array')
-   }
- })
+// contains(names, '// conColt', result => {
+//    if(result === true){
+//      console.log('Colt is in the array')
+//    } else {
+//      console.log('Colt is not in the array')
+//    }
+//  })
 
 
 
@@ -112,7 +112,21 @@ contains(names, '// conColt', result => {
   Hint: you can use a nested for loop to do this.
 */
 
-// CODE HERE
+const uniq = (array, callback) => {
+    for (let i = 0; i < array.length; i++) {
+        for (let x = i + 1; x < array.length; x++) {
+            if (array[i] === array[x]) {
+            array.splice(x, 1)
+             x--
+           }
+        }
+    }
+    callback(array)
+}
+/* Holly Crap Batman! Wow read super slow a lot of things going on in here. First we have a function. Second it returns a combined array and for loop from week 2 
+executing a block of code on each. Also is using array.length from week three/ assessment.  Third it is nesting another for loop in the combined loop invoking the callback
+with the modified array as an argument. Oh and .splice that could be from functions week 3. That's bitting off more than you can chew.
+*/
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -121,8 +135,9 @@ contains(names, '// conColt', result => {
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-// CODE HERE
-
+uniq(names, uniqArr => console.log (`The new names array with all the duplicate items removed is ${uniqArr}`))
+// wow brain hurt. Callback printing a string with a ${} template literal fist used in week 1 when learning strings and concatenation. Combining every thing we've learned so far.
+// terminal doesn't like callback(array) typed in before my last comment. callback is not defined. so yeah it doesn't work but looks fancy.
 
 
 ////////// PROBLEM 6 //////////
